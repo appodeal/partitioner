@@ -3,7 +3,6 @@ require "partitioner_pg/separation_type/month"
 
 module PartitionerPg
   extend ActiveSupport::Concern
-  include SeparationType::Month
 
   #available types - :month
   def initialize(type)
@@ -11,9 +10,11 @@ module PartitionerPg
   end
 
   module ClassMethods
+    include SeparationType::Month
 
     def partitioner_pg(type)
       new(type.to_sym)
+      puts TEST0
     end
 
     private
