@@ -1,4 +1,5 @@
 require "partitioner/version"
+require "partitioner/separation_type/month"
 
 module Partitioner
   extend ActiveSupport::Concern
