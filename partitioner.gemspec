@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'partitioner/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "partitioner"
+  spec.name          = "partitioner_pg"
   spec.version       = Partitioner::VERSION
   spec.authors       = ["Aleksander Nikulin"]
   spec.email         = ["nikulinaleksandr@gmail.com"]
