@@ -74,4 +74,5 @@ module SeparationType::Month
     def name_of_partition_table(date=Date.today)
       date.strftime("#{table_name}_y%Ym%m")
     end
+  end
 end

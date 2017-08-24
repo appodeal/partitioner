@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'partitioner/version'
+require 'partitioner_pg/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "partitioner_pg"
-  spec.version       = Partitioner::VERSION
+  spec.version       = PartitionerPg::VERSION
   spec.authors       = ["Aleksander Nikulin"]
   spec.email         = ["nikulinaleksandr@gmail.com"]
 
