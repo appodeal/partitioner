@@ -1,7 +1,7 @@
-require "partitioner/version"
-require "partitioner/separation_type/month"
+require "partitioner_pg/version"
+require "partitioner_pg/separation_type/month"
 
-module Partitioner
+module PartitionerPg
   extend ActiveSupport::Concern
   include SeparationType::Month
 
@@ -12,7 +12,7 @@ module Partitioner
 
   module ClassMethods
 
-    def partitioner(type)
+    def partitioner_pg(type)
       new(type.to_sym)
     end
 
