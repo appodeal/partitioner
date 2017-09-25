@@ -1,6 +1,7 @@
 # PartitionerPg
 
 It's a gem for a partitioning Postgresql tables in Ruby on Rails.
+Now gem can help you with partitioning tables by months. New table for each month.
 
 ## Installation
 
