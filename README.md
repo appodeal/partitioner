@@ -30,9 +30,9 @@ add instructions to migration:
 ```ruby
 class YouMigrationClassName
   def change
-    Article.create_partitioning_by_month_trigger_sql
-    Article.create_month_table
-    Article.create_next_month_table
+    YouModel.create_partitioning_by_month_trigger_sql
+    YouModel.create_month_table
+    YouModel.create_next_month_table
   end
 end
 
@@ -41,5 +41,5 @@ end
   I recommed to create rake task and run it once a day by crontab.
 code for a rake task
 ```ruby
-Article.create_next_month_table
+YouModel.create_next_month_table
 ```
