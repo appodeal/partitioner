@@ -18,7 +18,6 @@ Example:
 ```ruby
 class YouModelName < ActiveRecord::Base
   include PartitionerPg
-...
 ```
 2) Create migration and add some instructions to it.
 generate migration:
