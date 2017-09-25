@@ -39,6 +39,6 @@ end
 3) For correct work you need to create next_mont_table every month.
   I recommed to create rake task and run it once a day by crontab.
 code for a rake task
-```
+```ruby
 Article.create_next_month_table
 ```
