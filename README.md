@@ -13,7 +13,7 @@ gem 'partitioner_pg'
 
 ## Usage
 
-1) Include PartitionerPg into your model - `include PartitionerPg`
+1) Include PartitionerPg into your model: `include PartitionerPg`. Also, you can specify parting column and some indexes.
 Example:
 ```ruby
 class YouModelName < ActiveRecord::Base
