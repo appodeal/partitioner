@@ -16,7 +16,7 @@ gem 'partitioner_pg'
 1) Include PartitionerPg into your model: `include PartitionerPg`. Also, you can specify parting column and some indexes.
 Example:
 ```ruby
-class YouModelName < ActiveRecord::Base
+class YourModelName < ActiveRecord::Base
   include PartitionerPg
   
   # Point date or datetime column which will be used for monthly partitioning. Optional (:created_at uses by default)
@@ -64,16 +64,16 @@ add instructions to migration:
 ```ruby
 class YouMigrationClassName
   def change
-    YouModel.create_partitioning_by_month_trigger_sql
-    YouModel.create_month_table
-    YouModel.create_next_month_table
+    YourModel.create_partitioning_by_month_trigger_sql
+    YourModel.create_month_table
+    YourModel.create_next_month_table
   end
 end
 ```
 
-3) For correct work you need to create next_mont_table every month.
+3) For correct work you need to create next partition every month.
   We recommend you to create a rake task and run it once a month by crontab. Code for a rake task:
 
 ```ruby
-YouModel.create_next_month_table
+YourModel.create_next_month_table
 ```
