@@ -1,4 +1,3 @@
-test
 # PartitionerPg
 
 It's a gem for a partitioning Postgresql tables in Ruby on Rails.
