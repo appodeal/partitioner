@@ -53,12 +53,14 @@ class YouModelName < ActiveRecord::Base
   end
 end
 ```
-2) Create migration and add some instructions to it.
-generate migration:
+2) Create migration and add some instructions to it. Generate migration:
+
 ```
 rails g migration make_partitioning_of_you_table
 ```
+
 add instructions to migration:
+
 ```ruby
 class YouMigrationClassName
   def change
@@ -67,11 +69,11 @@ class YouMigrationClassName
     YouModel.create_next_month_table
   end
 end
-
 ```
+
 3) For correct work you need to create next_mont_table every month.
-  I recommed to create rake task and run it once a day by crontab.
-code for a rake task
+  We recommend you to create a rake task and run it once a month by crontab. Code for a rake task:
+
 ```ruby
 YouModel.create_next_month_table
 ```
